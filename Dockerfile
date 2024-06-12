@@ -6,10 +6,12 @@ ADD install_nevergrad.R /tmp/install_nevergrad.R
 RUN Rscript /tmp/install_nevergrad.R
 
 # Install system dependencies
-RUN #Rscript -e "install.packages('tidyverse', dependencies=TRUE)"
+RUN Rscript -e "install.packages('tidyverse', dependencies=TRUE)"
 RUN Rscript -e "install.packages('Robyn', dependencies=TRUE)"
 RUN Rscript -e "install.packages('prophet', dependencies=TRUE)"
 RUN Rscript -e "install.packages('reticulate', dependencies=TRUE)"
+RUN Rscript -e "install.packages('remotes', dependencies=TRUE)"
+RUN Rscript -e "install.packages('rstan', dependencies=TRUE)"
 
 # add app
 ADD sample.R /app/sample.R
