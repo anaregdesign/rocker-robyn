@@ -3,6 +3,9 @@
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
 
+
+options(repos="https://ftp.yz.yamagata-u.ac.jp/pub/cran/")
+
 #### Nevergrad installation guide
 ## ATTENTION: Python version 3.10+ version may cause Nevergrad error
 ## See here for more info about installing Python packages via reticulate
